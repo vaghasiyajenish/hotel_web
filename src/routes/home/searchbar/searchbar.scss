@@ -1,0 +1,72 @@
+@import "../../../styles/mixins/global.scss";
+
+.searchbar-grid-relative {
+  position: relative;
+  z-index: -1;
+}
+
+.searchbar-grid {
+  display: grid;
+  grid-template-columns: 1fr 148px;
+  padding: 0 0 18px 0;
+  gap: 0;
+
+  @include breakpoint("max-sm") {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+
+  .searchbar-grid-items {
+    .search-button {
+      button {
+        border: none;
+        background-color: var(--primary-button-background-color);
+        color: var(--primary-button-text-color);
+        padding: 12px;
+        width: 100%;
+        @include flex-center;
+        @include pointer;
+        @include font-16;
+        font-weight: 500;
+        justify-content: center;
+        border-radius: 0px 4px 4px 0px;
+        height: 48px;
+      }
+    }
+
+    .searchbar-design {
+      position: relative;
+
+      input {
+        width: 100%;
+        height: 48px;
+        border: 1px solid var(--theme-searchbar-border-color);
+        padding-left: 52px;
+        padding-right: 15px;
+        border-right: none;
+        @include font-16;
+        background-color: transparent;
+        letter-spacing: 0.02em;
+        color: var(--theme-searchbar-text-color);
+
+        @include breakpoint("max-sm") {
+          border-right: 1px solid var(--theme-searchbar-border-color);
+        }
+      }
+
+      .left-icon-alignment {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        @include flex-center;
+        left: 16px;
+      }
+
+      ::placeholder {
+        @include font-16;
+        letter-spacing: 0.02em;
+        color: var(--theme-searchbar-placeholder-color);
+      }
+    }
+  }
+}

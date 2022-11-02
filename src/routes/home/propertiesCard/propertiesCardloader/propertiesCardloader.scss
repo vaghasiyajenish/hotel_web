@@ -1,0 +1,45 @@
+@import "../../../../styles/mixins/global.scss";
+
+.properties-loader-all-card-content-alignment {
+  .card {
+    padding: 10px 0;
+
+    @include breakpoint("max-sm") {
+      padding: 16px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 20px;
+
+      @include breakpoint("max-sm") {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+      }
+
+      .grid-items {
+        .skeleton-image-loader {
+          width: 100%;
+          height: 160px;
+          @include breakpoint("max-sm") {
+            height: 190px;
+          }
+        }
+        .sec-contnet-loading {
+          width: 200px;
+          height: 21px;
+          margin: 0 0 10px 0;
+        }
+        .first-contnet-loading {
+          width: 360px;
+          height: 24px;
+          margin: 0 0 10px 0;
+          @include breakpoint("max-sm") {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

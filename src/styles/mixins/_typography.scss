@@ -1,0 +1,27 @@
+@use '../mixins/breakpoint.scss';
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+@mixin font-16 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    font-family: var(--secondary-font);
+}
+
+@mixin font-14 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    font-family: var(--secondary-font);
+}
+
+@mixin font-16-bold {
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    font-family: var(--primary-font-family);
+    line-height: 150%;
+}

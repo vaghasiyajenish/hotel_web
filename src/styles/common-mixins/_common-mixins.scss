@@ -1,0 +1,21 @@
+@mixin pointer {
+    cursor: pointer;
+}
+
+@mixin block {
+    display: block;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-between {
+    @include flex-center();
+    justify-content: space-between;
+}
+
+@mixin text-center {
+    text-align: center;
+}
